@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alice Quentrec — Data & AI</title>
+<meta name="description" content="Alice Quentrec's portfolio — Data Analyst IT at BPCE Solutions Informatiques, ESILV engineer specializing in Data & AI.">
+<meta property="og:title" content="Alice Quentrec — Data & IA Portfolio">
+<meta property="og:description" content="Data Analyst IT · ESILV · Data & AI Major · Paris">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#8b7355">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #fafaf8; color: #1a1a1a; font-weight: 300; font-size: 16px; line-height: 1.7; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.4rem 5vw;
+  background: rgba(250,250,248,0.93); backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ebebeb;
+}
+.nav-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 500; }
+nav ul { list-style: none; display: flex; gap: 2rem; }
+nav a { text-decoration: none; font-size: 0.73rem; font-weight: 400; color: #999; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
+nav a:hover { color: #1a1a1a; }
+
+/* ── HERO ── */
+#hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 5vw 5rem; max-width: 1100px; margin: 0 auto; }
+.hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; width: 100%; }
+.hero-eyebrow { font-size: 0.72rem; color: #b0a090; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+.hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: #b0a090; display: inline-block; }
+h1.hero-title { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.8rem; }
+h1.hero-title em { font-style: italic; color: #8b7355; }
+.hero-desc { font-size: 0.92rem; color: #666; line-height: 1.9; max-width: 400px; margin-bottom: 2.5rem; }
+.hero-ctas { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.btn-dark { display: inline-flex; align-items: center; gap: 0.5rem; background: #1a1a1a; color: #fafaf8; padding: 0.8rem 1.8rem; font-size: 0.78rem; letter-spacing: 0.05em; text-decoration: none; transition: background 0.2s; }
+.btn-dark:hover { background: #3a3a3a; }
+.btn-ghost { display: inline-flex; align-items: center; gap: 0.4rem; color: #888; font-size: 0.78rem; letter-spacing: 0.05em; text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+.btn-ghost:hover { color: #1a1a1a; border-color: #1a1a1a; }
+.hero-right { display: flex; flex-direction: column; }
+.info-row { display: flex; justify-content: space-between; align-items: baseline; padding: 1rem 0; border-bottom: 1px solid #ebebeb; }
+.info-row:first-child { border-top: 1px solid #ebebeb; }
+.info-label { font-size: 0.68rem; font-weight: 400; color: #bbb; letter-spacing: 0.1em; text-transform: uppercase; }
+.info-value { font-size: 0.85rem; color: #444; text-align: right; }
+
+/* ── SECTIONS ── */
+.section-wrap { max-width: 1100px; margin: 0 auto; padding: 6rem 5vw; border-top: 1px solid #ebebeb; }
+.section-header { display: grid; grid-template-columns: 180px 1fr; gap: 4rem; margin-bottom: 4rem; }
+.section-num { font-size: 0.68rem; font-weight: 400; color: #ccc; letter-spacing: 0.1em; text-transform: uppercase; padding-top: 0.5rem; }
+h2.s-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; letter-spacing: -0.02em; color: #1a1a1a; line-height: 1.15; }
+h2.s-title em { font-style: italic; color: #8b7355; }
+
+/* ── ABOUT ── */
+.about-grid { display: grid; grid-template-columns: 180px 1fr; gap: 4rem; }
+.about-text { font-size: 0.92rem; color: #555; line-height: 1.9; }
+.about-text p + p { margin-top: 1.1rem; }
+.about-text strong { color: #1a1a1a; font-weight: 500; }
+.skills-section { margin-top: 4rem; display: grid; grid-template-columns: 180px 1fr; gap: 4rem; }
+.skill-group + .skill-group { margin-top: 1.8rem; }
+.skill-group-name { font-size: 0.68rem; font-weight: 500; color: #1a1a1a; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.7rem; }
+.skill-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pill { font-size: 0.76rem; color: #555; background: #f0efea; padding: 0.3rem 0.8rem; border-radius: 100px; transition: background 0.15s, color 0.15s; cursor: default; }
+.pill:hover { background: #1a1a1a; color: #fafaf8; }
+
+/* ── CERTIFICATIONS ── */
+.cert-grid { display: grid; grid-template-columns: 180px 1fr; gap: 4rem; }
+.cert-list { display: flex; flex-direction: column; gap: 1rem; }
+.cert-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.2rem 1.5rem; background: #fff; border: 1px solid #ebebeb; transition: border-color 0.2s; }
+.cert-item:hover { border-color: #c8bfb0; }
+.cert-logo { width: 42px; height: 42px; background: #1a1a1a; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.05em; text-align: center; flex-shrink: 0; line-height: 1.2; }
+.cert-body h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 500; margin-bottom: 0.15rem; }
+.cert-body p { font-size: 0.78rem; color: #888; }
+.cert-badge { margin-left: auto; font-size: 0.68rem; color: #8b7355; background: #f7f2eb; padding: 0.2rem 0.65rem; border-radius: 3px; white-space: nowrap; flex-shrink: 0; }
+
+/* ── EXPERIENCE ── */
+.exp-list { display: flex; flex-direction: column; }
+.exp-item { display: grid; grid-template-columns: 180px 1fr; gap: 4rem; padding: 2.5rem 0; border-bottom: 1px solid #ebebeb; }
+.exp-item:first-child { border-top: 1px solid #ebebeb; }
+.exp-period { font-size: 0.72rem; color: #bbb; display: block; margin-bottom: 0.3rem; }
+.exp-type { font-size: 0.68rem; font-weight: 500; color: #8b7355; text-transform: uppercase; letter-spacing: 0.08em; }
+.exp-company { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 500; margin-bottom: 0.15rem; }
+.exp-role { font-size: 0.8rem; color: #888; margin-bottom: 0.9rem; }
+.exp-desc { font-size: 0.88rem; color: #555; line-height: 1.8; margin-bottom: 0.5rem; }
+.exp-missions { margin: 0.8rem 0 1rem 0; padding-left: 1.2rem; }
+.exp-missions li { font-size: 0.85rem; color: #555; line-height: 1.7; margin-bottom: 0.3rem; }
+.exp-stack { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
+.stag { font-size: 0.7rem; color: #999; background: #f5f5f2; padding: 0.22rem 0.65rem; border-radius: 3px; }
+
+/* ── FORMATION ── */
+.edu-list { display: flex; flex-direction: column; }
+.edu-item { display: grid; grid-template-columns: 180px 1fr; gap: 4rem; padding: 2.5rem 0; border-bottom: 1px solid #ebebeb; }
+.edu-item:first-child { border-top: 1px solid #ebebeb; }
+.edu-years { font-size: 0.72rem; color: #bbb; padding-top: 0.2rem; }
+.edu-school { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 500; margin-bottom: 0.15rem; }
+.edu-degree { font-size: 0.8rem; color: #888; margin-bottom: 0.7rem; }
+.edu-detail { font-size: 0.85rem; color: #666; line-height: 1.75; }
+.edu-badge { display: inline-block; margin-top: 0.6rem; font-size: 0.7rem; color: #8b7355; background: #f7f2eb; padding: 0.2rem 0.65rem; border-radius: 3px; font-weight: 500; }
+.edu-courses { margin-top: 0.6rem; }
+.edu-courses strong { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #aaa; display: block; margin-bottom: 0.4rem; }
+.edu-courses ul { padding-left: 1.1rem; }
+.edu-courses li { font-size: 0.82rem; color: #777; line-height: 1.6; }
+
+/* ── PROJETS ── */
+.projects-filter { display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.filter-btn { font-size: 0.72rem; color: #888; background: #f0efea; border: none; padding: 0.35rem 0.9rem; border-radius: 100px; cursor: pointer; transition: background 0.15s, color 0.15s; font-family: 'Inter', sans-serif; letter-spacing: 0.04em; }
+.filter-btn:hover, .filter-btn.active { background: #1a1a1a; color: #fff; }
+
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.proj-card { background: #fff; border: 1px solid #ebebeb; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s; overflow: hidden; }
+.proj-card:hover { border-color: #c8bfb0; box-shadow: 0 8px 32px rgba(0,0,0,0.07); transform: translateY(-3px); }
+.proj-card.hidden { display: none; }
+
+.proj-banner { height: 150px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; flex-shrink: 0; }
+.proj-banner-icon { font-size: 2.8rem; position: relative; z-index: 1; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2)); }
+.proj-banner-pattern { position: absolute; inset: 0; opacity: 0.1; background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 18px 18px; }
+
+.proj-body { padding: 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+.proj-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.proj-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 500; line-height: 1.2; }
+.proj-arrow { color: #ccc; transition: color 0.2s, transform 0.2s; font-size: 1rem; flex-shrink: 0; margin-left: 0.5rem; }
+.proj-card:hover .proj-arrow { color: #8b7355; transform: translate(3px, -3px); }
+.proj-desc { font-size: 0.81rem; color: #666; line-height: 1.75; flex: 1; }
+.proj-stack { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.proj-stag { font-size: 0.67rem; color: #888; background: #f5f5f2; padding: 0.2rem 0.55rem; border-radius: 3px; }
+.proj-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 0.7rem; border-top: 1px solid #f2f2f0; margin-top: auto; }
+.proj-lang { font-size: 0.69rem; color: #aaa; display: flex; align-items: center; gap: 0.4rem; }
+.lang-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+
+/* ── CV ── */
+.cv-block { display: flex; align-items: center; justify-content: space-between; padding: 2.5rem; border: 1px solid #ebebeb; background: #fff; max-width: 640px; gap: 2rem; }
+.cv-left h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 400; margin-bottom: 0.35rem; }
+.cv-left p { font-size: 0.8rem; color: #888; }
+
+/* ── EXTRAS ── */
+.extras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.extras-col h3 { font-size: 0.68rem; font-weight: 500; color: #bbb; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.lang-list { display: flex; flex-direction: column; }
+.lang-item { display: flex; align-items: center; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid #f0f0f0; }
+.lang-item:last-child { border-bottom: none; }
+.lang-name { font-family: 'Playfair Display', serif; font-size: 0.92rem; width: 90px; }
+.lang-level { font-size: 0.7rem; color: #bbb; width: 28px; text-align: right; }
+.lang-bar-wrap { flex: 1; height: 1.5px; background: #ebebeb; }
+.lang-bar { height: 1.5px; background: #8b7355; }
+.interest-list { display: flex; flex-direction: column; gap: 0; }
+.interest-item { font-size: 0.85rem; color: #555; padding: 0.7rem 0; border-bottom: 1px solid #f0f0f0; line-height: 1.6; }
+.interest-item:last-child { border-bottom: none; }
+.interest-item strong { color: #1a1a1a; font-weight: 500; display: block; margin-bottom: 0.1rem; font-size: 0.82rem; }
+
+footer { border-top: 1px solid #ebebeb; padding: 2rem 5vw; display: flex; justify-content: space-between; font-size: 0.72rem; color: #ccc; max-width: 1100px; margin: 0 auto; }
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.shown { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE COMPLET ── */
+@media (max-width: 1024px) {
+  #hero { padding: 7rem 4vw 4rem; }
+  .hero-inner { gap: 3rem; }
+  .section-wrap { padding: 5rem 4vw; }
+}
+
+@media (max-width: 860px) {
+  nav { padding: 1rem 4vw; }
+  nav ul { gap: 1.2rem; }
+  nav a { font-size: 0.68rem; letter-spacing: 0.04em; }
+  #hero { min-height: auto; padding: 6.5rem 4vw 3.5rem; }
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  h1.hero-title { font-size: 3.2rem; }
+  .hero-desc { max-width: 100%; }
+  .section-wrap { padding: 4rem 4vw; }
+  .section-header { grid-template-columns: 1fr; gap: 0.75rem; margin-bottom: 2.5rem; }
+  .section-num { display: none; }
+  .about-grid, .skills-section, .cert-grid, .extras-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .exp-item, .edu-item { grid-template-columns: 1fr; gap: 0.4rem; padding: 2rem 0; }
+  .exp-period, .edu-years { font-size: 0.72rem; }
+  .projects-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .proj-banner { height: 130px; }
+}
+
+@media (max-width: 600px) {
+  nav ul { display: none; }
+  .hamburger { display: flex; }
+  nav { justify-content: space-between; }
+  h1.hero-title { font-size: 2.6rem; }
+  .hero-inner { gap: 2rem; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .cv-block { flex-direction: column; gap: 1.25rem; align-items: flex-start; }
+  .info-row { flex-direction: column; gap: 0.2rem; }
+  .info-value { text-align: left; }
+  .cert-item { flex-wrap: wrap; gap: 1rem; }
+  .cert-badge { margin-left: 0; }
+  section { padding: 3.5rem 5vw; }
+}
+
+/* ── AMÉLIORATIONS VISUELLES PRO ── */
+::selection { background: #8b7355; color: #fff; }
+
+/* Barre de progression de lecture */
+#progress-bar {
+  position: fixed; top: 0; left: 0; height: 2px; z-index: 200;
+  background: linear-gradient(90deg, #8b7355, #c4a882);
+  width: 0%; transition: width 0.1s linear;
+}
+
+/* Menu hamburger mobile */
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  padding: 4px; background: none; border: none;
+}
+.hamburger span { width: 22px; height: 1.5px; background: #1a1a1a; display: block; transition: all 0.25s; }
+
+/* Mobile nav overlay */
+.mobile-nav {
+  display: none; position: fixed; inset: 0; background: rgba(250,250,248,0.97);
+  backdrop-filter: blur(12px); z-index: 99; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2.5rem;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-size: 1.4rem; font-family: 'Playfair Display', serif; color: #1a1a1a; text-decoration: none; letter-spacing: 0.02em; }
+.mobile-nav a:hover { color: #8b7355; }
+.mobile-nav-close { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; cursor: pointer; background: none; border: none; color: #888; }
+
+/* Hover timeline */
+.exp-item, .edu-item { transition: background 0.2s; border-radius: 4px; margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+.exp-item:hover, .edu-item:hover { background: #faf9f7; }
+
+/* Cartes projet : overlay au survol */
+.proj-card { position: relative; }
+.proj-card::after {
+  content: 'View project →';
+  position: absolute; inset: 0;
+  background: rgba(26,26,26,0.85);
+  color: #fff; font-size: 0.8rem; letter-spacing: 0.08em;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.25s;
+  font-family: 'Inter', sans-serif;
+}
+.proj-card:hover::after { opacity: 1; }
+
+/* Scrollbar discrète */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #e0ddd8; border-radius: 2px; }
+
+/* Focus accessible */
+a:focus-visible, button:focus-visible { outline: 2px solid #8b7355; outline-offset: 3px; border-radius: 2px; }
+
+/* Animation entrée plus fluide */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.85s cubic-bezier(0.16,1,0.3,1), transform 0.85s cubic-bezier(0.16,1,0.3,1); }
+.reveal.shown { opacity: 1; transform: none; }
+
+/* Stagger sur les cards projets */
+.proj-card:nth-child(2) { transition-delay: 0.05s; }
+.proj-card:nth-child(3) { transition-delay: 0.1s; }
+.proj-card:nth-child(4) { transition-delay: 0.05s; }
+
+/* Ligne décorative hero */
+.hero-left::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, #b0a090);
+  margin-bottom: 1.5rem;
+}
+
+/* ── LANG SWITCH ── */
+.lang-switch {
+  font-size: 0.7rem; font-weight: 500; color: #888;
+  text-decoration: none; letter-spacing: 0.12em;
+  border: 1px solid #ddd; padding: 0.3rem 0.7rem;
+  border-radius: 3px; transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+.lang-switch:hover { color: #1a1a1a; border-color: #1a1a1a; }
+
+/* ── CARTE MÉMOIRE ── */
+.memoire-card {
+  margin-top: 1.25rem; padding: 1.5rem;
+  background: #fdf9f4; border: 1px solid #e8ddd0;
+  border-left: 3px solid #8b7355; border-radius: 0 6px 6px 0;
+  transition: box-shadow 0.2s;
+}
+.memoire-card:hover { box-shadow: 0 4px 20px rgba(139,115,85,0.1); }
+.memoire-header { display: flex; align-items: flex-start; gap: 0.9rem; margin-bottom: 1rem; }
+.memoire-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  background: #fff; border: 1px solid #e8ddd0; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; color: #8b7355;
+}
+.memoire-label { font-size: 0.65rem; font-weight: 500; color: #8b7355; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.memoire-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 500; color: #1a1a1a; }
+.memoire-question { font-size: 0.82rem; color: #555; line-height: 1.7; font-style: italic; margin-bottom: 1rem; padding-left: 0.75rem; border-left: 1.5px solid #e8ddd0; }
+.memoire-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
+.memoire-tag { font-size: 0.68rem; color: #8b7355; background: #f7f2eb; padding: 0.2rem 0.65rem; border-radius: 3px; }
+.memoire-dl { display: inline-flex; align-items: center; gap: 0.5rem; background: #1a1a1a; color: #fafaf8; padding: 0.6rem 1.25rem; font-size: 0.75rem; letter-spacing: 0.04em; text-decoration: none; border-radius: 3px; transition: background 0.2s; }
+.memoire-dl:hover { background: #3a3a3a; }
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+
+<!-- Menu mobile overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#experience" onclick="closeMobileNav()">Experience</a>
+  <a href="#education" onclick="closeMobileNav()">Education</a>
+  <a href="#extras" onclick="closeMobileNav()">Commitments</a>
+  <a href="#projects" onclick="closeMobileNav()">Projects</a>
+  <a href="#cv" onclick="closeMobileNav()">Resume</a>
+</div>
+
+<nav>
+  <div class="nav-name">Alice Quentrec</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#extras">Commitments</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#cv">Resume</a></li>
+  </ul>
+  <a href="index.html" class="lang-switch" title="Version française">FR</a>
+  <button class="hamburger" onclick="openMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div style="max-width:1100px;margin:0 auto;">
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Data & Artificial Intelligence</div>
+      <h1 class="hero-title">Alice<br><em>Quentrec</em></h1>
+      <p class="hero-desc">Engineer in training at <strong>ESILV</strong>, Data & AI major, building my expertise at the crossroads of technology and real-world challenges, in a work-study program at <strong>BPCE Solutions Informatiques</strong>.</p>
+    </div>
+    </div>
+    <div class="hero-right">
+      <div class="info-row"><span class="info-label">Current role</span><span class="info-value">Data Analyst IT — BPCE SI</span></div>
+      <div class="info-row"><span class="info-label">Education</span><span class="info-value">ESILV · 1st year engineering cycle</span></div>
+      <div class="info-row"><span class="info-label">Major</span><span class="info-value">Data & AI · Class of 2028</span></div>
+      <div class="info-row"><span class="info-label">Location</span><span class="info-value">Paris, France</span></div>
+      <div class="info-row"><span class="info-label">Email</span><span class="info-value"><a href="mailto:alice.quentrec@free.fr" style="color:#8b7355;text-decoration:none;">alice.quentrec@free.fr</a></span></div>
+      <div class="info-row"><span class="info-label">LinkedIn</span><span class="info-value"><a href="https://linkedin.com/in/alice-quentrec" target="_blank" style="color:#8b7355;text-decoration:none;">alice-quentrec ↗</a></span></div>
+      <div class="info-row"><span class="info-label">GitHub</span><span class="info-value"><a href="https://github.com/alicequentrec" target="_blank" style="color:#8b7355;text-decoration:none;">alicequentrec ↗</a></span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ABOUT -->
+<div class="section-wrap reveal" id="about">
+  <div class="section-header">
+    <div class="section-num">01 — Profile</div>
+    <h2 class="s-title">About<br><em>me</em></h2>
+  </div>
+  <div class="about-grid">
+    <div></div>
+    <div class="about-text">
+      <p>Engineering student at <strong>ESILV</strong> (Data & AI major, Class of 2028), I'm building my career at the intersection of technology and business. What drives me is understanding how data can address real operational challenges — not just manipulating it, but giving it meaning.</p>
+      <p>In a work-study program at <strong>BPCE Solutions Informatiques</strong>, I work as a Decision Support Developer in the Finance & Refinancing department. I handle concrete, high-impact projects: system decommissioning, banking data analysis, and BI tool migration as part of the Orion program.</p>
+      <p>Previously, a one-year work-study at <strong>Crédit Agricole Assurances</strong> introduced me to building analytical dashboards for business teams — my first immersion in data within a major financial group.</p>
+      <p>University exchanges in <strong>Tallinn</strong> and <strong>London</strong> rounded out my background, giving me an international outlook and genuine adaptability.</p>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="skills-section" id="skills">
+    <div class="section-num" style="padding-top:0.2rem;">Compétences</div>
+    <div>
+      <div class="skill-group">
+        <div class="skill-group-name">Data & AI</div>
+        <div class="skill-pills">
+          <span class="pill">Machine Learning</span><span class="pill">Jupyter Notebook</span><span class="pill">Power BI</span><span class="pill">DAX</span><span class="pill">Data Visualisation</span><span class="pill">Statistical Analysis</span><span class="pill">Reporting</span><span class="pill">Business Intelligence</span><span class="pill">Data Lineage</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Programming</div>
+        <div class="skill-pills">
+          <span class="pill">Python</span><span class="pill">Django</span><span class="pill">Pandas</span><span class="pill">Matplotlib</span><span class="pill">SQL</span><span class="pill">Java</span><span class="pill">PHP</span><span class="pill">Kotlin</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Web Development</div>
+        <div class="skill-pills">
+          <span class="pill">React.js</span><span class="pill">Vue.js</span><span class="pill">Symfony</span><span class="pill">Node.js</span><span class="pill">Spring MVC</span><span class="pill">JavaScript</span><span class="pill">HTML / CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Databases & Infrastructure</div>
+        <div class="skill-pills">
+          <span class="pill">MySQL</span><span class="pill">PostgreSQL</span><span class="pill">MongoDB</span><span class="pill">Docker</span><span class="pill">ETL</span><span class="pill">Decision-support systems</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Office Tools</div>
+        <div class="skill-pills">
+          <span class="pill">Microsoft 365</span><span class="pill">Power BI</span><span class="pill">Canva</span><span class="pill">Notion</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Strengths</div>
+        <div class="skill-pills">
+          <span class="pill">Team player</span><span class="pill">Result-oriented</span><span class="pill">Strong interpersonal skills</span><span class="pill">Highly adaptable</span><span class="pill">Autonomous & organized</span><span class="pill">Curious & open-minded</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="section-wrap reveal" id="certifications">
+  <div class="section-header">
+    <div class="section-num">02 — Certifications</div>
+    <h2 class="s-title">Training<br><em>& certifications</em></h2>
+  </div>
+  <div class="cert-grid">
+    <div></div>
+    <div class="cert-list">
+      <div class="cert-item">
+        <div class="cert-logo">BMC</div>
+        <div class="cert-body">
+          <h4>Bloomberg Market Concepts (BMC)</h4>
+          <p>Bloomberg — Financial markets fundamentals, economics, equities, bonds, and currencies.</p>
+        </div>
+        <span class="cert-badge">Obtained</span>
+      </div>
+      <div class="cert-item">
+        <div class="cert-logo" style="font-size:0.6rem;">PIX</div>
+        <div class="cert-body">
+          <h4>Pix Certification</h4>
+          <p>National digital skills certification (France).</p>
+        </div>
+        <span class="cert-badge">Obtained</span>
+      </div>
+      <div class="cert-item">
+        <div class="cert-logo" style="background:#1d3a8a; font-size:0.55rem; line-height:1.3;">HANDI<br>MGT</div>
+        <div class="cert-body">
+          <h4>Handimanagement Label</h4>
+          <p>Companieros / Efrei Paris — Disability awareness, inclusive management, and integration of people with disabilities.</p>
+        </div>
+        <span class="cert-badge">Obtained</span>
+      </div>
+      <div class="cert-item" style="opacity:0.55;">
+        <div class="cert-logo" style="background:#e0ddd8; color:#aaa;">+</div>
+        <div class="cert-body">
+          <h4>Upcoming certifications</h4>
+          <p>More certifications currently in preparation.</p>
+        </div>
+        <span class="cert-badge" style="color:#bbb; background:#f5f5f2;">Upcoming</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section-wrap reveal" id="experience">
+  <div class="section-header">
+    <div class="section-num">03 — Experience</div>
+    <h2 class="s-title">Professional<br><em>experience</em></h2>
+  </div>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div>
+        <span class="exp-period">sept. 2025 — août 2028</span>
+        <span class="exp-type">Work-study · 3 years</span>
+      </div>
+      <div>
+        <div class="exp-company">BPCE Solutions Informatiques</div>
+        <div class="exp-role">Data Analyst IT · Finance & Refinancing MYSYS Department · Paris</div>
+        <p class="exp-desc">Within the Finance & Risk platform, I work on high-impact decision-support projects as part of the Orion program, collaborating with business and technical teams.</p>
+        <ul class="exp-missions">
+          <li>SCM project monitoring and analysis — financial data loading and control</li>
+          <li>Decommissioning of decision-support processes: ETL dependency analysis via DiCollab, Stambia mapping documentation, VTOM job identification</li>
+          <li>Business usage analysis of the DVME datamart and implementation of replacement solutions</li>
+          <li>BI4 report migration and user acceptance testing — dashboard adaptation to user needs</li>
+        </ul>
+        <div class="exp-stack">
+          <span class="stag">DiCollab</span><span class="stag">Stambia (ETL)</span><span class="stag">VTOM</span><span class="stag">Power BI</span><span class="stag">Excel</span><span class="stag">GitLab</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <span class="exp-period">sept. 2024 — août 2025</span>
+        <span class="exp-type">Work-study · 1 year</span>
+      </div>
+      <div>
+        <div class="exp-company">Crédit Agricole Assurances</div>
+        <div class="exp-role">Decision Support Developer · IT, Digital & Data Department</div>
+        <ul class="exp-missions">
+          <li>Analyze, design and develop KPIs for an activity tracking application</li>
+          <li>Organize data collection and accessibility in collaboration with business teams, ensuring secure processing of large volumes</li>
+          <li>Deliver presentations to the department to communicate analyses and results</li>
+        </ul>
+        <div class="exp-stack">
+          <span class="stag">GitLab</span><span class="stag">Python</span><span class="stag">SQL</span><span class="stag">Django</span><span class="stag">Pandas</span><span class="stag">Matplotlib</span><span class="stag">Power Point</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <span class="exp-period">juin — août 2024</span>
+        <span class="exp-type">Internship · 3 months</span>
+      </div>
+      <div>
+        <div class="exp-company">Crédit Agricole Assurances</div>
+        <div class="exp-role">Data Analyst · IT, Digital & Data Department</div>
+        <ul class="exp-missions">
+          <li>Apply analytical methods to transform and clean data to produce dashboards</li>
+          <li>Collaborate with teams to adapt the company's solutions</li>
+        </ul>
+        <div class="exp-stack">
+          <span class="stag">DAX</span><span class="stag">Power BI</span><span class="stag">Excel</span><span class="stag">GitLab</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FORMATION -->
+<div class="section-wrap reveal" id="education">
+  <div class="section-header">
+    <div class="section-num">04 — Education</div>
+    <h2 class="s-title">Academic<br><em>background</em></h2>
+  </div>
+  <div class="edu-list">
+
+    <div class="edu-item">
+      <div class="edu-years">2024 — 2028</div>
+      <div>
+        <div class="edu-school">ESILV — Léonard de Vinci Graduate School of Engineering</div>
+        <div class="edu-degree">Cycle Ingénieur · Majeure Data & Artificial Intelligence · Promotion 2028</div>
+        <p class="edu-detail">3-year engineering program in work-study, with progressive specialization in Data & AI.</p>
+        <div class="edu-courses">
+          <strong>1st year (ongoing)</strong>
+          <ul>
+            <li>Optimisation, Fondamentaux de l'IA, Méthodes numériques, Équations différentielles, Sciences de l'ingénieur, Soft skills</li>
+          </ul>
+        </div>
+        <div class="edu-courses" style="margin-top:0.6rem;">
+          <strong>Master 1 & 2 (upcoming)</strong>
+          <ul>
+            <li>Machine Learning, Deep Learning, Data Engineering, MLOps — and other Data & AI major courses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-years">2023 — 2024</div>
+      <div>
+        <div class="edu-school">Efrei</div>
+        <div class="edu-degree">Bachelor of Computer Science — Licence Degree · 3rd year Digital Engineering</div>
+        <p class="edu-detail">Data visualisation, API integration, Agile project management. Thesis: data quality and governance.</p>
+        <div class="edu-courses" style="margin-top:0.6rem;">
+          <strong>Projects completed</strong>
+          <ul>
+            <li>Casino game <em>Click</em> — API usage, data collection and analysis, developed with Symfony</li>
+          </ul>
+        </div>
+        <!-- Mémoire -->
+        <div class="memoire-card">
+          <div class="memoire-header">
+            <div class="memoire-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div>
+              <div class="memoire-label">Bachelor's Thesis</div>
+              <div class="memoire-title">Data Quality & Governance</div>
+            </div>
+          </div>
+          <p class="memoire-question">« To what extent does the rise of Big Data and AI lead to the emergence of data governance and data quality as indispensable practices? »</p>
+          <div class="memoire-meta">
+            <span class="memoire-tag">Crédit Agricole Assurances</span>
+            <span class="memoire-tag">Efrei · 2024–2025</span>
+            <span class="memoire-tag">Supervisor: Ms. Léa Delacroix</span>
+          </div>
+          <a href="Memoire_Alice_Quentrec_Fin_de_Licence.docx" download class="memoire-dl">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download thesis
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-years">2022 — 2023<br><br><span style="font-size:0.68rem;color:#c8bfb0;">Échange · avr–mai 2024</span></div>
+      <div>
+        <div class="edu-school">Efrei</div>
+        <div class="edu-degree">2nd year Digital Engineering Bachelor</div>
+        <p class="edu-detail">Web & mobile development, MongoDB, PostgreSQL, Business Intelligence, project management (V-model).</p>
+        <div class="edu-courses" style="margin-top:0.6rem;">
+          <strong>Projects completed</strong>
+          <ul>
+            <li>Rick & Morty <em>website</em> — HTML, CSS and JavaScript development with data retrieval and analysis via an API</li>
+            <li>Email management app — Microsoft Outlook OAuth authentication integration in Vue.js, user data security</li>
+            <li>E-commerce website — built in React.js and JavaScript with MongoDB database</li>
+          </ul>
+        </div>
+        <span class="edu-badge">🇪🇪 University exchange · Taltech, Tallinn, Estonia</span>
+        <div class="edu-courses" style="margin-top:0.8rem;">
+          <strong>Courses at Taltech</strong>
+          <ul>
+            <li>Project Management · Artificial Intelligence · Digital Transformation & Digital Ecosystem · Monitoring / Business Intelligence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-years">2021 — 2022<br><br><span style="font-size:0.68rem;color:#c8bfb0;">Échange · juin–juil. 2023</span></div>
+      <div>
+        <div class="edu-school">ECE</div>
+        <div class="edu-degree">1st year Digital Engineering Bachelor</div>
+        <p class="edu-detail">Data modelling, Data Cleaning, infrastructure & virtualisation, network security.</p>
+        <div class="edu-courses" style="margin-top:0.6rem;">
+          <strong>Projects completed</strong>
+          <ul>
+            <li>Museum website — built in HTML, CSS and PHP with MySQL database</li>
+            <li>Online shop — complete e-commerce integrating a MySQL database for the backend</li>
+          </ul>
+        </div>
+        <span class="edu-badge">🇬🇧 University exchange · Omnes Education, London</span>
+        <div class="edu-courses" style="margin-top:0.8rem;">
+          <strong>Courses at Omnes Education, London</strong>
+          <ul>
+            <li>Leadership Management, Business English, Professional Writing — in a dynamic international environment, significantly strengthening professional English practice.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-years">2019 — 2022</div>
+      <div>
+        <div class="edu-school">Lycée Jean de la Fontaine · Paris 16th</div>
+        <div class="edu-degree">French Baccalauréat — Maths & Physics-Chemistry</div>
+        <p class="edu-detail">Specialties: Mathematics and Physics-Chemistry. Pix certification.</p>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-years">2015 — 2019</div>
+      <div>
+        <div class="edu-school">Collège Notre-Dame des Oiseaux · Paris 16th</div>
+        <div class="edu-degree">Middle School Diploma</div>
+        <p class="edu-detail">General education with a strong interest in mathematics and sciences.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROJETS -->
+<div class="section-wrap reveal" id="extras">
+  <div class="section-header">
+    <div class="section-num">05 — More</div>
+    <h2 class="s-title">Languages &<br><em>commitments</em></h2>
+  </div>
+  <div class="extras-grid">
+    <div class="extras-col">
+      <h3>Languages</h3>
+      <div class="lang-list">
+        <div class="lang-item"><span class="lang-name">Français</span><div class="lang-bar-wrap"><div class="lang-bar" style="width:100%"></div></div><span class="lang-level">Native</span></div>
+        <div class="lang-item"><span class="lang-name">Anglais</span><div class="lang-bar-wrap"><div class="lang-bar" style="width:70%"></div></div><span class="lang-level">B2</span></div>
+        <div class="lang-item"><span class="lang-name">Espagnol</span><div class="lang-bar-wrap"><div class="lang-bar" style="width:30%"></div></div><span class="lang-level">A2</span></div>
+      </div>
+
+      <h3 style="margin-top:2.5rem;">Driving licenses</h3>
+      <div class="skill-pills" style="margin-top:0.8rem;">
+        <span class="pill">🚗 Driver's license</span>
+        <span class="pill">⛵ Boat license</span>
+      </div>
+    </div>
+
+    <div class="extras-col">
+      <h3>Commitments & activities</h3>
+      <div class="interest-list">
+        <div class="interest-item">
+          <strong>Student associations</strong>
+          Photographer for the school's EPS student association — event coverage and visual productions.
+        </div>
+        <div class="interest-item">
+          <strong>Event hostess — Agence Profil (DSD)</strong>
+          Guest reception at Parc des Princes during football matches, at Céline and Printemps. Professional presence, customer service and interpersonal skills.
+        </div>
+        <div class="interest-item">
+          <strong>Private tutor — Mathematics</strong>
+          Teaching mathematics with responsibility and dedication. Personalised student coaching.
+        </div>
+        <div class="interest-item">
+          <strong>Scoutisme</strong>
+          After 9 years in scouting, I served as a pack leader for 2 years with a group of 24 boys (ages 8–12). PSC1 and CEP1 certified — responsibility, pedagogy and leadership.
+        </div>
+        <div class="interest-item">
+          <strong>Sports & hobbies</strong>
+          Dance, running, tennis, padel. Cultural travel and international discoveries.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-wrap reveal" id="projects">
+  <div class="section-header">
+    <div class="section-num">06 — Projects</div>
+    <h2 class="s-title">My GitHub<br><em>projects</em></h2>
+  </div>
+
+  <div class="projects-filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="data">Data / ML</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn" data-filter="jeu">Games</button>
+  </div>
+
+  <div class="projects-grid">
+
+    <a href="https://github.com/alicequentrec/ProjetVerifly" target="_blank" class="proj-card" data-cat="data">
+      <div class="proj-banner" style="background:#0d2440;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#0d2440"/><rect x="0" y="0" width="300" height="150" fill="url(#gv)"/><defs><linearGradient id="gv" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d2440"/><stop offset="100%" stop-color="#1e4080"/></linearGradient></defs><rect x="60" y="92" width="18" height="35" rx="2" fill="#3b82f6" opacity="0.9"/><rect x="86" y="72" width="18" height="55" rx="2" fill="#60a5fa" opacity="0.8"/><rect x="112" y="82" width="18" height="45" rx="2" fill="#3b82f6" opacity="0.9"/><rect x="138" y="58" width="18" height="69" rx="2" fill="#93c5fd" opacity="0.85"/><rect x="164" y="76" width="18" height="51" rx="2" fill="#60a5fa" opacity="0.8"/><rect x="190" y="65" width="18" height="62" rx="2" fill="#3b82f6" opacity="0.9"/><circle cx="155" cy="65" r="32" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="4"/><line x1="179" y1="89" x2="200" y2="110" stroke="rgba(255,255,255,0.85)" stroke-width="5" stroke-linecap="round"/><circle cx="236" cy="32" r="12" fill="#22c55e"/><polyline points="230,32 234,36 242,27" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">ProjetVerifly</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Data verification and validation application. Collection, processing, and quality control of structured data with automated anomaly reporting.</p>
+        <div class="proj-stack"><span class="proj-stag">Python</span><span class="proj-stag">Data Cleaning</span><span class="proj-stag">Pandas</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/NutriTrack" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#0a2218;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#0a2218"/><circle cx="240" cy="115" r="75" fill="#14532d" opacity="0.35"/><ellipse cx="110" cy="82" rx="50" ry="50" fill="none" stroke="#4ade80" stroke-width="2.5" opacity="0.7"/><ellipse cx="110" cy="82" rx="36" ry="36" fill="#14532d" opacity="0.4"/><ellipse cx="110" cy="82" rx="36" ry="36" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.4"/><line x1="76" y1="48" x2="76" y2="116" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/><line x1="70" y1="48" x2="70" y2="66" stroke="#4ade80" stroke-width="2" stroke-linecap="round" opacity="0.6"/><line x1="82" y1="48" x2="82" y2="66" stroke="#4ade80" stroke-width="2" stroke-linecap="round" opacity="0.6"/><polyline points="168,118 190,95 210,105 232,78 252,88 274,55" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="232" cy="78" r="4" fill="#4ade80"/><circle cx="274" cy="55" r="5" fill="#4ade80"/><rect x="185" y="18" width="88" height="30" rx="8" fill="#166534" opacity="0.85"/><polygon points="205,48 215,48 210,58" fill="#166534" opacity="0.85"/><circle cx="207" cy="33" r="3.5" fill="#4ade80"/><circle cx="219" cy="33" r="3.5" fill="#4ade80"/><circle cx="231" cy="33" r="3.5" fill="#4ade80"/></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">NutriTrack</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Nutrition website with integrated chatbot. Built during the Taltech exchange (Tallinn) — needs analysis, project management, UX and full-stack development.</p>
+        <div class="proj-stack"><span class="proj-stag">JavaScript</span><span class="proj-stag">Chatbot</span><span class="proj-stag">UX / UI</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/node-authentication" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#1a0830;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#1a0830"/><circle cx="270" cy="130" r="80" fill="#4c1d95" opacity="0.18"/><rect x="116" y="68" width="68" height="56" rx="8" fill="#6d28d9" opacity="0.95"/><path d="M128 68 V54 a22 22 0 0 1 44 0 V68" fill="none" stroke="#a78bfa" stroke-width="5" stroke-linecap="round"/><circle cx="150" cy="90" r="10" fill="#c4b5fd"/><rect x="145" y="90" width="10" height="16" rx="5" fill="#c4b5fd"/><circle cx="52" cy="55" r="28" fill="#3b0764" stroke="#7c3aed" stroke-width="2" opacity="0.85"/><text x="52" y="51" font-family="sans-serif" font-size="8" fill="#a78bfa" text-anchor="middle">Token</text><text x="52" y="63" font-family="sans-serif" font-size="7" fill="#7c3aed" text-anchor="middle">JWT</text><line x1="80" y1="58" x2="114" y2="82" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.75"/><circle cx="248" cy="55" r="28" fill="#3b0764" stroke="#7c3aed" stroke-width="2" opacity="0.85"/><text x="248" y="51" font-family="sans-serif" font-size="8" fill="#a78bfa" text-anchor="middle">OAuth</text><text x="248" y="63" font-family="sans-serif" font-size="7" fill="#7c3aed" text-anchor="middle">2.0</text><line x1="220" y1="58" x2="186" y2="82" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.75"/><circle cx="52" cy="115" r="28" fill="#3b0764" stroke="#7c3aed" stroke-width="2" opacity="0.85"/><text x="52" y="111" font-family="sans-serif" font-size="8" fill="#a78bfa" text-anchor="middle">Bcrypt</text><text x="52" y="123" font-family="sans-serif" font-size="7" fill="#7c3aed" text-anchor="middle">Hash</text><line x1="80" y1="112" x2="114" y2="108" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/><circle cx="248" cy="115" r="28" fill="#3b0764" stroke="#7c3aed" stroke-width="2" opacity="0.85"/><text x="248" y="111" font-family="sans-serif" font-size="8" fill="#a78bfa" text-anchor="middle">Session</text><text x="248" y="123" font-family="sans-serif" font-size="7" fill="#7c3aed" text-anchor="middle">Salt</text><line x1="220" y1="112" x2="186" y2="108" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Node Authentication</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Comprehensive tutorial on Node.js authentication techniques — from plain-text passwords to hashing, salting and OAuth. Web security best practices.</p>
+        <div class="proj-stack"><span class="proj-stag">Node.js</span><span class="proj-stag">OAuth</span><span class="proj-stag">Security</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/SpringMVC-RESTful-Web-Services" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#0c2010;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#0c2010"/><circle cx="60" cy="75" r="34" fill="#14532d" opacity="0.9"/><text x="60" y="70" font-family="sans-serif" font-size="9" fill="#86efac" text-anchor="middle" font-weight="500">Client</text><text x="60" y="84" font-family="sans-serif" font-size="8" fill="#4ade80" text-anchor="middle">HTTP</text><rect x="122" y="42" width="56" height="66" rx="8" fill="#15803d" opacity="0.95"/><text x="150" y="62" font-family="sans-serif" font-size="8" fill="#fff" text-anchor="middle" font-weight="600">Spring</text><text x="150" y="75" font-family="sans-serif" font-size="7.5" fill="#bbf7d0" text-anchor="middle">MVC</text><circle cx="150" cy="90" r="8" fill="#4ade80" opacity="0.3"/><text x="150" y="94" font-family="sans-serif" font-size="7" fill="#4ade80" text-anchor="middle">REST</text><circle cx="240" cy="75" r="34" fill="#14532d" opacity="0.9"/><text x="240" y="70" font-family="sans-serif" font-size="9" fill="#86efac" text-anchor="middle" font-weight="500">Service</text><text x="240" y="84" font-family="sans-serif" font-size="8" fill="#4ade80" text-anchor="middle">JSON</text><line x1="94" y1="70" x2="122" y2="70" stroke="#4ade80" stroke-width="2.5" opacity="0.9"/><polygon points="118,66 125,70 118,74" fill="#4ade80"/><line x1="178" y1="70" x2="206" y2="70" stroke="#4ade80" stroke-width="2.5" opacity="0.9"/><polygon points="202,66 209,70 202,74" fill="#4ade80"/><line x1="206" y1="80" x2="178" y2="80" stroke="#86efac" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/><line x1="122" y1="80" x2="94" y2="80" stroke="#86efac" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/><rect x="95" y="118" width="110" height="20" rx="10" fill="#14532d" opacity="0.6"/><text x="150" y="132" font-family="sans-serif" font-size="9" fill="#4ade80" text-anchor="middle">RESTful · Java</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Spring MVC REST</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">RESTful web services built with Spring MVC — Java backend architecture, route management, controllers and JSON responses.</p>
+        <div class="proj-stack"><span class="proj-stag">Java</span><span class="proj-stag">Spring MVC</span><span class="proj-stag">REST API</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#b07219"></span> Java</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/ReactJeu" target="_blank" class="proj-card" data-cat="jeu web">
+      <div class="proj-banner" style="background:#070e1f;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#070e1f"/><circle cx="150" cy="72" r="11" fill="#61dafb"/><ellipse cx="150" cy="72" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="2" opacity="0.5"/><ellipse cx="150" cy="72" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="2" opacity="0.5" transform="rotate(60 150 72)"/><ellipse cx="150" cy="72" rx="56" ry="22" fill="none" stroke="#61dafb" stroke-width="2" opacity="0.5" transform="rotate(120 150 72)"/><rect x="195" y="18" width="85" height="55" rx="14" fill="#132040" stroke="#61dafb" stroke-width="1.5" opacity="0.9"/><circle cx="213" cy="45" r="7" fill="#1e3a5f"/><circle cx="230" cy="45" r="7" fill="#1e3a5f"/><circle cx="257" cy="36" r="5" fill="#ef4444" opacity="0.9"/><circle cx="268" cy="45" r="5" fill="#22c55e" opacity="0.9"/><circle cx="257" cy="54" r="5" fill="#3b82f6" opacity="0.9"/><circle cx="246" cy="45" r="5" fill="#f59e0b" opacity="0.9"/><rect x="20" y="20" width="80" height="40" rx="6" fill="#132040" stroke="#61dafb" stroke-width="1" opacity="0.85"/><text x="60" y="36" font-family="monospace" font-size="8" fill="#61dafb" text-anchor="middle">SCORE</text><text x="60" y="52" font-family="monospace" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">1240</text><text x="38" y="130" font-size="14" fill="#f59e0b">★★★</text><text x="84" y="130" font-size="14" fill="#374151" opacity="0.5">★★</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">ReactJeu</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Interactive game built in React.js — dynamic components, state management and user interactions.</p>
+        <div class="proj-stack"><span class="proj-stag">React.js</span><span class="proj-stag">JavaScript</span><span class="proj-stag">Game</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#61dafb"></span> React</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/Todolist" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#18110a;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#18110a"/><circle cx="255" cy="125" r="60" fill="#78350f" opacity="0.25"/><rect x="65" y="15" width="170" height="122" rx="6" fill="#211808"/><rect x="65" y="15" width="18" height="122" rx="3" fill="#92400e" opacity="0.7"/><circle cx="65" cy="38" r="5" fill="none" stroke="#d97706" stroke-width="2"/><circle cx="65" cy="62" r="5" fill="none" stroke="#d97706" stroke-width="2"/><circle cx="65" cy="86" r="5" fill="none" stroke="#d97706" stroke-width="2"/><circle cx="65" cy="110" r="5" fill="none" stroke="#d97706" stroke-width="2"/><rect x="96" y="30" width="14" height="14" rx="3" fill="#22c55e"/><polyline points="99,37 103,41 108,33" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="118" y1="37" x2="215" y2="37" stroke="#4b5563" stroke-width="2" stroke-linecap="round"/><rect x="96" y="54" width="14" height="14" rx="3" fill="#22c55e"/><polyline points="99,61 103,65 108,57" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="118" y1="61" x2="200" y2="61" stroke="#4b5563" stroke-width="2" stroke-linecap="round"/><rect x="96" y="78" width="14" height="14" rx="3" fill="none" stroke="#d97706" stroke-width="2"/><line x1="118" y1="85" x2="218" y2="85" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/><rect x="96" y="102" width="14" height="14" rx="3" fill="none" stroke="#4b5563" stroke-width="1.5"/><line x1="118" y1="109" x2="195" y2="109" stroke="#374151" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Todolist</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Task management application — create, edit, delete and organise task lists with data persistence.</p>
+        <div class="proj-stack"><span class="proj-stag">JavaScript</span><span class="proj-stag">CRUD</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/Hackatthon" target="_blank" class="proj-card" data-cat="data web">
+      <div class="proj-banner" style="background:#110820;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#110820"/><circle cx="150" cy="75" r="95" fill="#4c1d95" opacity="0.15"/><polygon points="162,15 128,78 152,78 138,135 182,62 154,62" fill="#f59e0b" opacity="0.95"/><circle cx="52" cy="68" r="30" fill="none" stroke="#7c3aed" stroke-width="3" opacity="0.8"/><line x1="52" y1="68" x2="52" y2="46" stroke="#a78bfa" stroke-width="3" stroke-linecap="round"/><line x1="52" y1="68" x2="66" y2="74" stroke="#a78bfa" stroke-width="3" stroke-linecap="round"/><circle cx="52" cy="68" r="3.5" fill="#a78bfa"/><line x1="52" y1="38" x2="52" y2="33" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/><line x1="40" y1="41" x2="36" y2="37" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/><line x1="64" y1="41" x2="68" y2="37" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/><text x="52" y="115" font-family="monospace" font-size="13" fill="#7c3aed" text-anchor="middle" font-weight="bold">24H</text><circle cx="248" cy="55" r="24" fill="#fbbf24" opacity="0.1"/><circle cx="248" cy="55" r="24" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.65"/><line x1="240" y1="76" x2="256" y2="76" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/><line x1="243" y1="82" x2="253" y2="82" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.55"/><line x1="248" y1="31" x2="248" y2="25" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/><text x="248" y="118" font-family="monospace" font-size="9" fill="#a78bfa" text-anchor="middle">team work</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Hackatthon</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Project built during a hackathon — rapid development of a technical solution in a team under time pressure.</p>
+        <div class="proj-stack"><span class="proj-stag">Hackathon</span><span class="proj-stag">Teamwork</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#888"></span> Mixed</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/ProjetBigMoney" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#091810;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#091810"/><line x1="38" y1="118" x2="275" y2="118" stroke="#166534" stroke-width="1" opacity="0.5"/><line x1="38" y1="90" x2="275" y2="90" stroke="#166534" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.35"/><line x1="38" y1="62" x2="275" y2="62" stroke="#166534" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.35"/><line x1="38" y1="34" x2="275" y2="34" stroke="#166534" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.35"/><line x1="38" y1="22" x2="38" y2="118" stroke="#166534" stroke-width="1" opacity="0.5"/><polyline points="38,108 72,102 106,96 138,84 162,72 192,52 220,42 260,24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><polygon points="38,108 72,102 106,96 138,84 162,72 192,52 220,42 260,24 260,118 38,118" fill="#4ade80" opacity="0.07"/><circle cx="192" cy="52" r="4" fill="#4ade80"/><circle cx="260" cy="24" r="5" fill="#4ade80"/><rect x="220" y="10" width="58" height="19" rx="4" fill="#14532d"/><text x="249" y="23" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle">+18.4%  ↑</text><circle cx="65" cy="52" r="24" fill="#ca8a04" opacity="0.12"/><circle cx="65" cy="52" r="24" fill="none" stroke="#ca8a04" stroke-width="2" opacity="0.55"/><text x="65" y="58" font-family="serif" font-size="20" fill="#fbbf24" text-anchor="middle" opacity="0.9">€</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">ProjetBigMoney</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Financial management application — budget tracking, transactions and personal financial data visualisation.</p>
+        <div class="proj-stack"><span class="proj-stag">Fintech</span><span class="proj-stag">Gestion financière</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/Taskflow" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#080f1a;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#080f1a"/><rect x="12" y="22" width="82" height="20" rx="4" fill="#172554"/><text x="53" y="36" font-family="sans-serif" font-size="8" fill="#93c5fd" text-anchor="middle">À faire</text><rect x="12" y="48" width="82" height="30" rx="4" fill="#0f172a" stroke="#1e40af" stroke-width="1"/><rect x="20" y="56" width="42" height="5" rx="2" fill="#3b82f6" opacity="0.7"/><rect x="20" y="66" width="58" height="4" rx="2" fill="#1e40af" opacity="0.6"/><rect x="12" y="85" width="82" height="30" rx="4" fill="#0f172a" stroke="#1e40af" stroke-width="1"/><rect x="20" y="93" width="55" height="5" rx="2" fill="#3b82f6" opacity="0.7"/><rect x="20" y="103" width="35" height="4" rx="2" fill="#1e40af" opacity="0.5"/><rect x="109" y="22" width="82" height="20" rx="4" fill="#14290a"/><text x="150" y="36" font-family="sans-serif" font-size="8" fill="#86efac" text-anchor="middle">En cours</text><rect x="109" y="48" width="82" height="30" rx="4" fill="#0a1f08" stroke="#16a34a" stroke-width="1.5"/><rect x="117" y="56" width="50" height="5" rx="2" fill="#4ade80" opacity="0.85"/><rect x="117" y="66" width="62" height="4" rx="2" fill="#166534" opacity="0.7"/><rect x="206" y="22" width="82" height="20" rx="4" fill="#1c1005"/><text x="247" y="36" font-family="sans-serif" font-size="8" fill="#fcd34d" text-anchor="middle">Terminé</text><rect x="206" y="48" width="82" height="30" rx="4" fill="#160c04" stroke="#d97706" stroke-width="1"/><rect x="214" y="56" width="36" height="5" rx="2" fill="#f59e0b" opacity="0.65"/><rect x="214" y="66" width="55" height="4" rx="2" fill="#92400e" opacity="0.6"/><rect x="206" y="85" width="82" height="30" rx="4" fill="#160c04" stroke="#d97706" stroke-width="1"/><rect x="214" y="93" width="48" height="5" rx="2" fill="#f59e0b" opacity="0.65"/><rect x="214" y="103" width="62" height="4" rx="2" fill="#92400e" opacity="0.5"/><line x1="94" y1="62" x2="109" y2="62" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.7"/><polygon points="107,59 112,62 107,65" fill="#3b82f6" opacity="0.7"/></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Taskflow</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Task flow and workflow management tool — visual organisation of project stages and progress tracking.</p>
+        <div class="proj-stack"><span class="proj-stag">Project management</span><span class="proj-stag">Workflow</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/ProjetKotlin" target="_blank" class="proj-card" data-cat="mobile">
+      <div class="proj-banner" style="background:#100820;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#100820"/><circle cx="235" cy="80" r="65" fill="#3730a3" opacity="0.15"/><rect x="100" y="12" width="100" height="130" rx="14" fill="#1a1040" stroke="#7c3aed" stroke-width="2"/><rect x="108" y="24" width="84" height="100" rx="4" fill="#0a0818"/><rect x="125" y="15" width="50" height="9" rx="4.5" fill="#0a0818"/><rect x="114" y="30" width="72" height="9" rx="2" fill="#7c3aed" opacity="0.7"/><rect x="114" y="46" width="45" height="7" rx="2" fill="#4c1d95" opacity="0.8"/><rect x="114" y="59" width="62" height="7" rx="2" fill="#4c1d95" opacity="0.6"/><rect x="114" y="74" width="72" height="32" rx="5" fill="#2e1065" opacity="0.9"/><text x="150" y="95" font-family="monospace" font-size="16" fill="#a78bfa" text-anchor="middle" font-weight="bold">Kt</text><rect x="114" y="112" width="30" height="9" rx="2" fill="#4c1d95" opacity="0.7"/><rect x="150" y="112" width="36" height="9" rx="2" fill="#7c3aed" opacity="0.5"/><circle cx="150" cy="132" r="7" fill="none" stroke="#6d28d9" stroke-width="1.5"/><polygon points="40,35 72,35 72,75 56,57 40,75" fill="#7c3aed" opacity="0.85"/><polygon points="40,75 56,57 72,75" fill="#a78bfa" opacity="0.6"/></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">ProjetKotlin</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Android mobile application built in Kotlin — native Android development with interface and data management.</p>
+        <div class="proj-stack"><span class="proj-stag">Kotlin</span><span class="proj-stag">Android</span><span class="proj-stag">Mobile</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#A97BFF"></span> Kotlin</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/Rick-et-Morty" target="_blank" class="proj-card" data-cat="web data">
+      <div class="proj-banner" style="background:#081208;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#081208"/><ellipse cx="150" cy="78" rx="55" ry="65" fill="#4ade80" opacity="0.07"/><ellipse cx="150" cy="78" rx="55" ry="65" fill="none" stroke="#4ade80" stroke-width="3" opacity="0.82"/><ellipse cx="150" cy="78" rx="40" ry="48" fill="none" stroke="#4ade80" stroke-width="1.5" opacity="0.42"/><ellipse cx="150" cy="78" rx="22" ry="28" fill="#86efac" opacity="0.08"/><line x1="105" y1="50" x2="90" y2="35" stroke="#4ade80" stroke-width="2.5" opacity="0.75"/><line x1="195" y1="50" x2="210" y2="35" stroke="#4ade80" stroke-width="2.5" opacity="0.75"/><circle cx="48" cy="35" r="26" fill="#0d2b0d" stroke="#16a34a" stroke-width="1.5" opacity="0.9"/><text x="48" y="31" font-family="sans-serif" font-size="8" fill="#4ade80" text-anchor="middle">/character</text><text x="48" y="43" font-family="sans-serif" font-size="9" fill="#86efac" text-anchor="middle" font-weight="600">826</text><line x1="74" y1="42" x2="95" y2="58" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/><circle cx="252" cy="35" r="26" fill="#0d2b0d" stroke="#16a34a" stroke-width="1.5" opacity="0.9"/><text x="252" y="31" font-family="sans-serif" font-size="8" fill="#4ade80" text-anchor="middle">/episode</text><text x="252" y="43" font-family="sans-serif" font-size="9" fill="#86efac" text-anchor="middle" font-weight="600">51</text><line x1="226" y1="42" x2="205" y2="58" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/><circle cx="48" cy="120" r="20" fill="#0d2b0d" stroke="#16a34a" stroke-width="1.5" opacity="0.85"/><text x="48" y="116" font-family="sans-serif" font-size="7.5" fill="#86efac" text-anchor="middle">JSON</text><text x="48" y="127" font-family="sans-serif" font-size="7" fill="#4ade80" text-anchor="middle">API</text><circle cx="252" cy="120" r="20" fill="#0d2b0d" stroke="#16a34a" stroke-width="1.5" opacity="0.85"/><text x="252" y="116" font-family="sans-serif" font-size="7.5" fill="#86efac" text-anchor="middle">Alive</text><text x="252" y="127" font-family="sans-serif" font-size="7" fill="#4ade80" text-anchor="middle">status</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Rick & Morty</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Website built in HTML, CSS and JavaScript with data retrieval and analysis via the Rick & Morty API — dynamic display of characters and episodes.</p>
+        <div class="proj-stack"><span class="proj-stag">JavaScript</span><span class="proj-stag">API REST</span><span class="proj-stag">HTML/CSS</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/Daniel-Feau" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#111008;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#111008"/><polygon points="150,18 225,72 225,138 75,138 75,72" fill="#1e1a0a" stroke="#c8a850" stroke-width="2"/><polygon points="150,18 235,78 65,78" fill="#2a2410" stroke="#c8a850" stroke-width="2"/><rect x="128" y="102" width="44" height="36" rx="3" fill="#0d0c06" stroke="#c8a850" stroke-width="1.5"/><circle cx="165" cy="120" r="3" fill="#c8a850"/><rect x="84" y="92" width="32" height="28" rx="2" fill="#0d0c06" stroke="#c8a850" stroke-width="1.2"/><line x1="100" y1="92" x2="100" y2="120" stroke="#c8a850" stroke-width="0.8" opacity="0.6"/><line x1="84" y1="106" x2="116" y2="106" stroke="#c8a850" stroke-width="0.8" opacity="0.6"/><rect x="184" y="92" width="32" height="28" rx="2" fill="#0d0c06" stroke="#c8a850" stroke-width="1.2"/><line x1="200" y1="92" x2="200" y2="120" stroke="#c8a850" stroke-width="0.8" opacity="0.6"/><line x1="184" y1="106" x2="216" y2="106" stroke="#c8a850" stroke-width="0.8" opacity="0.6"/><line x1="35" y1="138" x2="265" y2="138" stroke="#c8a850" stroke-width="1.2" opacity="0.5"/><ellipse cx="42" cy="125" rx="16" ry="22" fill="#141e0a" opacity="0.8"/><rect x="39" y="134" width="6" height="7" fill="#1a1008"/><ellipse cx="258" cy="125" rx="16" ry="22" fill="#141e0a" opacity="0.8"/><rect x="255" y="134" width="6" height="7" fill="#1a1008"/><text x="150" y="58" font-family="serif" font-size="10" fill="#c8a850" text-anchor="middle" opacity="0.75">✦  Prestige  ✦</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Daniel Féau</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Real estate website inspired by the Daniel Féau agency — property listings, navigation and polished user interface.</p>
+        <div class="proj-stack"><span class="proj-stag">HTML</span><span class="proj-stag">CSS</span><span class="proj-stag">JavaScript</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#e34c26"></span> HTML</span></div>
+      </div>
+    </a>
+
+  </div>
+
+    <a href="https://github.com/alicequentrec/PROJET-NODE" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#081510;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#081510"/><circle cx="260" cy="30" r="50" fill="#14532d" opacity="0.2"/><polygon points="150,14 198,40 198,92 150,118 102,92 102,40" fill="none" stroke="#4ade80" stroke-width="2.5" opacity="0.8"/><polygon points="150,26 186,47 186,88 150,109 114,88 114,47" fill="#14532d" opacity="0.55"/><text x="150" y="72" font-family="sans-serif" font-size="20" fill="#4ade80" text-anchor="middle" font-weight="700">Node</text><text x="150" y="88" font-family="sans-serif" font-size="10" fill="#86efac" text-anchor="middle">JS</text><circle cx="48" cy="50" r="22" fill="#0a2218" stroke="#16a34a" stroke-width="1.5" opacity="0.9"/><text x="48" y="46" font-family="sans-serif" font-size="8" fill="#4ade80" text-anchor="middle">POST</text><text x="48" y="58" font-family="sans-serif" font-size="7" fill="#86efac" text-anchor="middle">/api</text><line x1="70" y1="52" x2="100" y2="62" stroke="#4ade80" stroke-width="1.5" opacity="0.7"/><circle cx="48" cy="100" r="22" fill="#0a2218" stroke="#16a34a" stroke-width="1.5" opacity="0.9"/><text x="48" y="96" font-family="sans-serif" font-size="8" fill="#86efac" text-anchor="middle">GET</text><text x="48" y="108" font-family="sans-serif" font-size="7" fill="#4ade80" text-anchor="middle">/users</text><line x1="70" y1="98" x2="100" y2="88" stroke="#4ade80" stroke-width="1.5" opacity="0.6"/><circle cx="252" cy="50" r="22" fill="#0a2218" stroke="#16a34a" stroke-width="1.5" opacity="0.9"/><text x="252" y="46" font-family="sans-serif" font-size="8" fill="#4ade80" text-anchor="middle">200</text><text x="252" y="58" font-family="sans-serif" font-size="7" fill="#86efac" text-anchor="middle">OK</text><line x1="200" y1="62" x2="230" y2="52" stroke="#86efac" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.65"/><circle cx="252" cy="100" r="22" fill="#0a2218" stroke="#16a34a" stroke-width="1.5" opacity="0.9"/><text x="252" y="96" font-family="sans-serif" font-size="8" fill="#86efac" text-anchor="middle">data</text><text x="252" y="108" font-family="sans-serif" font-size="7" fill="#4ade80" text-anchor="middle">JSON</text><line x1="200" y1="88" x2="230" y2="98" stroke="#86efac" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.55"/></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Projet Node</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Backend application built with Node.js — server, route management, API and database interactions.</p>
+        <div class="proj-stack"><span class="proj-stag">Node.js</span><span class="proj-stag">Backend</span><span class="proj-stag">API</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/vue.js" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#081510;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#081510"/><polygon points="150,10 192,10 150,82 108,10" fill="#41b883" opacity="0.95"/><polygon points="108,10 150,82 66,10" fill="#35495e" opacity="0.85"/><polygon points="192,10 234,10 150,135 66,10 108,10 150,82" fill="#41b883" opacity="0.4"/><rect x="14" y="100" width="118" height="40" rx="8" fill="#0a2218" stroke="#41b883" stroke-width="1.5"/><text x="73" y="116" font-family="sans-serif" font-size="9" fill="#41b883" text-anchor="middle" font-weight="600">Template</text><rect x="22" y="122" width="80" height="5" rx="2" fill="#4ade80" opacity="0.4"/><rect x="22" y="130" width="55" height="5" rx="2" fill="#4ade80" opacity="0.25"/><rect x="168" y="100" width="118" height="40" rx="8" fill="#0a2218" stroke="#41b883" stroke-width="1.5"/><text x="227" y="116" font-family="sans-serif" font-size="9" fill="#41b883" text-anchor="middle" font-weight="600">Script Setup</text><rect x="176" y="122" width="70" height="5" rx="2" fill="#4ade80" opacity="0.4"/><rect x="176" y="130" width="90" height="5" rx="2" fill="#4ade80" opacity="0.25"/></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Vue.js App</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Front-end application built with Vue.js — reactive components, state management and OAuth Microsoft Outlook integration for email management.</p>
+        <div class="proj-stack"><span class="proj-stag">Vue.js</span><span class="proj-stag">OAuth</span><span class="proj-stag">Microsoft Outlook</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#41b883"></span> Vue</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/traqmuscu" target="_blank" class="proj-card" data-cat="data web">
+      <div class="proj-banner" style="background:#120808;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#120808"/><circle cx="255" cy="110" r="65" fill="#7f1d1d" opacity="0.2"/><rect x="110" y="62" width="80" height="20" rx="3" fill="#374151"/><rect x="92" y="50" width="24" height="44" rx="6" fill="#dc2626" opacity="0.9"/><rect x="98" y="43" width="12" height="58" rx="3" fill="#ef4444" opacity="0.8"/><rect x="184" y="50" width="24" height="44" rx="6" fill="#dc2626" opacity="0.9"/><rect x="190" y="43" width="12" height="58" rx="3" fill="#ef4444" opacity="0.8"/><text x="28" y="28" font-family="monospace" font-size="7.5" fill="#f87171" opacity="0.7">S1</text><rect x="38" y="20" width="44" height="7" rx="3" fill="#7f1d1d"/><rect x="38" y="20" width="28" height="7" rx="3" fill="#ef4444" opacity="0.8"/><text x="28" y="44" font-family="monospace" font-size="7.5" fill="#f87171" opacity="0.7">S4</text><rect x="38" y="36" width="44" height="7" rx="3" fill="#7f1d1d"/><rect x="38" y="36" width="40" height="7" rx="3" fill="#ef4444" opacity="0.95"/><polyline points="28,135 68,127 108,120 148,110 190,97 230,84 272,68" fill="none" stroke="#f87171" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/><circle cx="272" cy="68" r="4" fill="#ef4444"/><text x="268" y="60" font-family="monospace" font-size="7" fill="#fca5a5" text-anchor="middle">+32%</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">TraqMuscu</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Muscle tracking application — workout session tracking, exercises and progress monitoring with data visualisation.</p>
+        <div class="proj-stack"><span class="proj-stag">Tracking</span><span class="proj-stag">Data</span><span class="proj-stag">Sport</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#f1e05a"></span> JavaScript</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/smartbike" target="_blank" class="proj-card" data-cat="data mobile">
+      <div class="proj-banner" style="background:#06101a;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#06101a"/><circle cx="88" cy="100" r="40" fill="none" stroke="#3b82f6" stroke-width="3" opacity="0.8"/><circle cx="88" cy="100" r="6" fill="#3b82f6"/><line x1="88" y1="60" x2="88" y2="140" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/><line x1="48" y1="100" x2="128" y2="100" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/><line x1="60" y1="72" x2="116" y2="128" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/><line x1="116" y1="72" x2="60" y2="128" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/><circle cx="212" cy="100" r="40" fill="none" stroke="#3b82f6" stroke-width="3" opacity="0.8"/><circle cx="212" cy="100" r="6" fill="#3b82f6"/><line x1="212" y1="60" x2="212" y2="140" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/><line x1="172" y1="100" x2="252" y2="100" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/><polyline points="88,100 124,60 162,100 124,100 144,60 186,53 212,100" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round"/><line x1="186" y1="53" x2="190" y2="38" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/><line x1="182" y1="36" x2="198" y2="36" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/><rect x="215" y="14" width="74" height="46" rx="5" fill="#0c1f35" stroke="#3b82f6" stroke-width="1.5"/><text x="252" y="30" font-family="monospace" font-size="7" fill="#93c5fd" text-anchor="middle">Speed</text><text x="252" y="44" font-family="monospace" font-size="13" fill="#60a5fa" text-anchor="middle" font-weight="bold">28km/h</text><text x="252" y="55" font-family="monospace" font-size="6.5" fill="#3b82f6" text-anchor="middle">● GPS on</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">SmartBike</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Connected smart bike application — journey data collection, performance tracking and mobility data analysis.</p>
+        <div class="proj-stack"><span class="proj-stag">IoT</span><span class="proj-stag">Data</span><span class="proj-stag">Mobility</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#888"></span> Mixed</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/Le-Bon-Coin" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#130d04;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#130d04"/><rect x="12" y="18" width="132" height="55" rx="5" fill="#211508" stroke="#d97706" stroke-width="1.5"/><rect x="20" y="26" width="42" height="32" rx="3" fill="#2a1a08" stroke="#92400e" stroke-width="1"/><text x="41" y="46" font-size="18" text-anchor="middle" fill="#f59e0b" opacity="0.8">🏠</text><rect x="70" y="30" width="64" height="7" rx="2" fill="#92400e" opacity="0.7"/><rect x="70" y="43" width="44" height="6" rx="2" fill="#78350f" opacity="0.6"/><text x="70" y="68" font-family="monospace" font-size="10" fill="#f59e0b" font-weight="bold">450 €</text><rect x="156" y="18" width="132" height="55" rx="5" fill="#211508" stroke="#d97706" stroke-width="1.5"/><rect x="164" y="26" width="42" height="32" rx="3" fill="#2a1a08" stroke="#92400e" stroke-width="1"/><text x="185" y="46" font-size="18" text-anchor="middle" fill="#f59e0b" opacity="0.8">🚗</text><rect x="214" y="30" width="60" height="7" rx="2" fill="#92400e" opacity="0.7"/><rect x="214" y="43" width="40" height="6" rx="2" fill="#78350f" opacity="0.6"/><text x="214" y="68" font-family="monospace" font-size="10" fill="#f59e0b" font-weight="bold">8 500 €</text><rect x="12" y="82" width="132" height="55" rx="5" fill="#211508" stroke="#d97706" stroke-width="1.5"/><rect x="20" y="90" width="42" height="32" rx="3" fill="#2a1a08" stroke="#92400e" stroke-width="1"/><text x="41" y="110" font-size="18" text-anchor="middle" fill="#f59e0b" opacity="0.8">💻</text><rect x="70" y="94" width="64" height="7" rx="2" fill="#92400e" opacity="0.7"/><rect x="70" y="107" width="44" height="6" rx="2" fill="#78350f" opacity="0.6"/><text x="70" y="132" font-family="monospace" font-size="10" fill="#f59e0b" font-weight="bold">320 €</text><rect x="156" y="90" width="132" height="32" rx="16" fill="#211508" stroke="#d97706" stroke-width="1.5"/><text x="222" y="111" font-family="monospace" font-size="8.5" fill="#92400e" text-anchor="middle">🔍  Rechercher...</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Le Bon Coin</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Le Bon Coin clone — classifieds platform with ad creation, search and filtering, integrating a database.</p>
+        <div class="proj-stack"><span class="proj-stag">PHP</span><span class="proj-stag">MySQL</span><span class="proj-stag">HTML/CSS</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#4F5D95"></span> PHP</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/Site-Mus-e" target="_blank" class="proj-card" data-cat="web">
+      <div class="proj-banner" style="background:#0e0e18;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#0e0e18"/><rect x="40" y="128" width="220" height="8" rx="2" fill="#6366f1" opacity="0.6"/><rect x="30" y="118" width="240" height="12" rx="2" fill="#4f46e5" opacity="0.5"/><rect x="62" y="42" width="18" height="78" rx="2" fill="#4338ca" opacity="0.7"/><rect x="96" y="42" width="18" height="78" rx="2" fill="#4338ca" opacity="0.7"/><rect x="130" y="42" width="18" height="78" rx="2" fill="#4338ca" opacity="0.7"/><rect x="164" y="42" width="18" height="78" rx="2" fill="#4338ca" opacity="0.7"/><rect x="198" y="42" width="18" height="78" rx="2" fill="#4338ca" opacity="0.7"/><rect x="55" y="36" width="190" height="10" rx="2" fill="#6366f1" opacity="0.6"/><polygon points="150,10 55,36 245,36" fill="#3730a3" opacity="0.7"/><rect x="120" y="90" width="60" height="28" rx="2" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/><rect x="120" y="93" width="60" height="8" rx="1" fill="#3730a3" opacity="0.7"/><text x="150" y="128" font-family="serif" font-size="9" fill="#818cf8" text-anchor="middle" opacity="0.7">Collection permanente</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Site Musée</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Museum website — collection display, online ticketing and content management, with MySQL database for the backend.</p>
+        <div class="proj-stack"><span class="proj-stag">HTML</span><span class="proj-stag">CSS</span><span class="proj-stag">PHP</span><span class="proj-stag">MySQL</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#e34c26"></span> HTML</span></div>
+      </div>
+    </a>
+
+    <a href="https://github.com/alicequentrec/Qwirkle" target="_blank" class="proj-card" data-cat="jeu">
+      <div class="proj-banner" style="background:#0c0c1e;">
+        <svg width="100%" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="150" fill="#0c0c1e"/><rect x="42" y="30" width="38" height="38" rx="5" fill="#dc2626" opacity="0.9"/><circle cx="61" cy="49" r="8" fill="#fca5a5" opacity="0.8"/><rect x="88" y="30" width="38" height="38" rx="5" fill="#2563a8" opacity="0.9"/><rect x="98" y="40" width="18" height="18" rx="2" fill="#93c5fd" opacity="0.8"/><rect x="134" y="30" width="38" height="38" rx="5" fill="#16a34a" opacity="0.9"/><polygon points="153,37 160,54 146,54" fill="#86efac" opacity="0.85"/><rect x="180" y="30" width="38" height="38" rx="5" fill="#d97706" opacity="0.9"/><circle cx="199" cy="49" r="9" fill="none" stroke="#fcd34d" stroke-width="3" opacity="0.85"/><rect x="226" y="30" width="38" height="38" rx="5" fill="#7c3aed" opacity="0.9"/><rect x="234" y="38" width="22" height="22" rx="11" fill="#c4b5fd" opacity="0.8"/><rect x="42" y="78" width="38" height="38" rx="5" fill="#0891b2" opacity="0.9"/><polygon points="61,85 68,102 54,102" fill="#7dd3fc" opacity="0.85"/><rect x="88" y="78" width="38" height="38" rx="5" fill="#dc2626" opacity="0.9"/><rect x="98" y="88" width="18" height="18" rx="2" fill="#fca5a5" opacity="0.8"/><rect x="134" y="78" width="38" height="38" rx="5" fill="#d97706" opacity="0.9"/><circle cx="153" cy="97" r="8" fill="#fcd34d" opacity="0.8"/><rect x="180" y="78" width="38" height="38" rx="5" fill="#16a34a" opacity="0.9"/><circle cx="199" cy="97" r="9" fill="none" stroke="#86efac" stroke-width="3" opacity="0.85"/><rect x="226" y="78" width="38" height="38" rx="5" fill="#2563a8" opacity="0.9"/><polygon points="245,85 252,102 238,102" fill="#93c5fd" opacity="0.85"/><text x="150" y="140" font-family="monospace" font-size="8" fill="#6366f1" text-anchor="middle" opacity="0.7">Java · POO · Logique de jeu</text></svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-top"><div class="proj-name">Qwirkle</div><div class="proj-arrow">↗</div></div>
+        <p class="proj-desc">Qwirkle board game implementation — game logic, rule management, interactive board and player interface.</p>
+        <div class="proj-stack"><span class="proj-stag">Java</span><span class="proj-stag">Game logic</span><span class="proj-stag">POO</span></div>
+        <div class="proj-footer"><span class="proj-lang"><span class="lang-dot" style="background:#b07219"></span> Java</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <div style="margin-top:2.5rem;text-align:center;">
+    <a href="https://github.com/alicequentrec" target="_blank" class="btn-ghost">View all my GitHub repos ↗</a>
+  </div>
+</div>
+
+<!-- CV -->
+<div class="section-wrap reveal" id="cv">
+  <div class="section-header">
+    <div class="section-num">07 — Resume</div>
+    <h2 class="s-title">My<br><em>resume</em></h2>
+  </div>
+  <div class="cv-block">
+    <div class="cv-left">
+      <h3>Alice Quentrec — Resume 2025</h3>
+      <p>Data Analyst IT · ESILV · Data & AI Major · Paris</p>
+    </div>
+    <a href="ALICE_QUENTREC_CV_Esilv.pdf" download class="btn-dark">Download PDF ↓</a>
+  </div>
+</div>
+
+<!-- EXTRAS -->
+<footer>
+  <span>© 2025 Alice Quentrec</span>
+  <span>Data & AI · ESILV · Paris · <a href="mailto:alice.quentrec@free.fr" style="color:#ccc;text-decoration:none;">alice.quentrec@free.fr</a></span>
+</footer>
+
+<script>
+// Barre de progression lecture
+window.addEventListener('scroll', () => {
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = Math.min((window.scrollY / total) * 100, 100);
+  document.getElementById('progress-bar').style.width = pct + '%';
+});
+
+// Menu hamburger mobile
+function openMobileNav() {
+  document.getElementById('mobileNav').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('mobileNav').addEventListener('click', function(e) {
+  if (e.target === this) closeMobileNav();
+});
+
+// Filtres projets
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.proj-card').forEach(card => {
+      const cats = card.dataset.cat || '';
+      card.classList.toggle('hidden', f !== 'all' && !cats.includes(f));
+    });
+  });
+});
+
+// Révélation au scroll
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('shown'); });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
